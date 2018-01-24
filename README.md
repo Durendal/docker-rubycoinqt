@@ -110,7 +110,7 @@ Just create a directory in the host machine (e.g. `/var/rubycoinqt-data`) and pl
 Then, when creating the container in the `docker run`, instead of naming a volume to mount use the directory.
 
         $ docker run -d \
-        --name rubycoinqt-node
+        --name rubycoinqt-node \
         -e DISPLAY=$DISPLAY \
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         -v /var/rubycoinqt-data:/rubycoin \
@@ -126,7 +126,7 @@ This can be used to change the behavior of the `rubycoinqt` service.
 Example:
 
         $ docker run -d \
-        --name rubycoinqt-node
+        --name rubycoinqt-node \
         -e DISPLAY=$DISPLAY \
         -v /tmp/.X11-unix:/tmp/.X11-unix \
         -v rubycoinqt-data:/rubycoin \
