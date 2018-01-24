@@ -20,6 +20,10 @@ To run:
         -v rubycoinqt-data:/rubycoin \
         durendalz/docker-rubycoinqt:latest
 
+If you receive an error that the display is not available try running:
+
+        $ xhost +local:docker
+
 ## Setup
 In order to setup a Rubycoin node with the default options perform the following steps:
 
