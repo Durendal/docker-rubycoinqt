@@ -25,6 +25,19 @@ RUN \
   cd .. && \
   rm -rf rubycoin
 
+RUN apt-get remove --purge -y \
+  git \
+  qt5-default \
+  qt5-qmake \
+  build-essential \
+  ca-certificates \
+  qtbase5-dev-tools \
+  qttools5-dev-tools \
+  libssl-dev \
+  libdb++-dev \
+  libboost-all-dev \
+  make
+
 VOLUME ["/rubycoin"]
 
 EXPOSE 5937 5938
