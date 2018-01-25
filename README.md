@@ -31,7 +31,6 @@ In order to setup a Rubycoin node with the default options perform the following
 
         $ docker volume create --name=rubycoinqt-data
 
-
 All the data the rubycoinqt service needs to work will be stored in the volume.
 The volume can then be reused to restore the state of the service in case the container needs to be recreated (in case of a host restart or when upgrading the version).
 
@@ -45,14 +44,13 @@ The volume can then be reused to restore the state of the service in case the co
         -p 5397:5397 \
         --restart unless-stopped \
          durendalz/docker-rubycoinqt
-s
+
 This will create a container named `rubycoinqt-node` which gets the host's port 5937 forwarded to it.
 Also this container will restart in the event it crashes or the host is restarted.
 
 3. Inspect the output of the container by using docker logs
 
        $ docker logs -f rubycoinqt-node
-
 
 ## Configuration Customization
 
