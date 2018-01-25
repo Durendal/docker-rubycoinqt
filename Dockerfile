@@ -14,13 +14,12 @@ RUN apt-get update && \
   qt5-qmake \
   qtbase5-dev-tools \
   qttools5-dev-tools \
-  libminiupnpc-dev \
   make
 
 RUN \
   git clone https://github.com/rubycoinorg/rubycoin.git && \
   cd rubycoin && \
-  qmake && \
+  qmake USE_UPNP=- && \
   make && \
   mv rubycoin-qt /usr/local/bin && \
   cd .. && \
